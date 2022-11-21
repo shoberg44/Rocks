@@ -8,11 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    enum Gamemode {
-        case vsMode
-        case AIMode
-        case Speed
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

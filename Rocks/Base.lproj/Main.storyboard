@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i5W-aA-uGG">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -12,13 +12,13 @@
         <!--AIView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="AIView" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController title="AIView" id="BYZ-38-t0r" customClass="AIViewController" customModule="Rocks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykE-up-mri">
-                                <rect key="frame" x="16" y="675" width="114" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykE-up-mri">
+                                <rect key="frame" x="16" y="675" width="114" height="62"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="TGH-su-qWP"/>
@@ -26,16 +26,22 @@
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Rock"/>
+                                <connections>
+                                    <action selector="rockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elj-LT-ltO"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-kE-piv">
-                                <rect key="frame" x="255" y="675" width="119" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-kE-piv">
+                                <rect key="frame" x="255" y="675" width="119" height="62"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Paper"/>
+                                <connections>
+                                    <action selector="paperButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZ7-CY-YfQ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdO-8d-Ezv">
-                                <rect key="frame" x="138" y="675" width="109" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdO-8d-Ezv">
+                                <rect key="frame" x="138" y="675" width="109" height="62"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="qdD-Dy-0Gt"/>
@@ -43,10 +49,24 @@
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Scissors"/>
+                                <connections>
+                                    <action selector="scissorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UvQ-xQ-MCF"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXV-BH-jS5">
-                                <rect key="frame" x="16" y="377" width="358" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ei-sP-mpz">
+                                <rect key="frame" x="86" y="250" width="218" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="zgc-0i-31I"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPr-9Q-BxN">
+                                <rect key="frame" x="86" y="500" width="218" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="rw3-AW-5Ok"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXV-BH-jS5">
+                                <rect key="frame" x="16" y="188" width="358" height="36"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Choose">
                                         <attributes>
@@ -61,22 +81,37 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KPr-9Q-BxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="4c0-oz-czC"/>
                             <constraint firstItem="2BD-kE-piv" firstAttribute="bottom" secondItem="ykE-up-mri" secondAttribute="bottom" id="7Rt-bU-bse"/>
+                            <constraint firstItem="AXV-BH-jS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Qn-SZ-lN8"/>
+                            <constraint firstItem="0ei-sP-mpz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="9Ak-3N-acg"/>
+                            <constraint firstItem="0ei-sP-mpz" firstAttribute="top" secondItem="AXV-BH-jS5" secondAttribute="bottom" constant="26" id="9Ik-YH-b07"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ei-sP-mpz" secondAttribute="trailing" constant="86" id="Fpd-fR-6TH"/>
                             <constraint firstItem="tdO-8d-Ezv" firstAttribute="bottom" secondItem="ykE-up-mri" secondAttribute="bottom" id="Fua-Wg-ltt"/>
                             <constraint firstItem="ykE-up-mri" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="584" id="KhG-RC-VOV"/>
+                            <constraint firstItem="KPr-9Q-BxN" firstAttribute="top" secondItem="0ei-sP-mpz" secondAttribute="bottom" constant="123" id="Lru-h7-A9w"/>
                             <constraint firstItem="2BD-kE-piv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="V7r-GE-mEu"/>
+                            <constraint firstItem="KPr-9Q-BxN" firstAttribute="top" secondItem="0ei-sP-mpz" secondAttribute="bottom" constant="123" id="VDq-LG-aLf"/>
                             <constraint firstItem="ykE-up-mri" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xzx-8s-na4"/>
+                            <constraint firstItem="0ei-sP-mpz" firstAttribute="top" secondItem="AXV-BH-jS5" secondAttribute="bottom" constant="26" id="c7t-du-OrP"/>
                             <constraint firstItem="tdO-8d-Ezv" firstAttribute="top" secondItem="ykE-up-mri" secondAttribute="top" id="chy-6d-JnX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AXV-BH-jS5" secondAttribute="trailing" constant="16" id="dTe-3M-4gT"/>
                             <constraint firstItem="2BD-kE-piv" firstAttribute="top" secondItem="ykE-up-mri" secondAttribute="top" id="ezw-Pu-S6K"/>
+                            <constraint firstItem="AXV-BH-jS5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="gll-EG-dxL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KPr-9Q-BxN" secondAttribute="trailing" constant="86" id="lo3-8u-hKn"/>
                             <constraint firstItem="2BD-kE-piv" firstAttribute="leading" secondItem="tdO-8d-Ezv" secondAttribute="trailing" constant="8" id="mCt-jt-QlB"/>
+                            <constraint firstItem="ykE-up-mri" firstAttribute="top" secondItem="KPr-9Q-BxN" secondAttribute="bottom" constant="48" id="ygh-W1-LTu"/>
                             <constraint firstItem="tdO-8d-Ezv" firstAttribute="leading" secondItem="ykE-up-mri" secondAttribute="trailing" constant="8" id="zQC-JT-0yL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AI Mode" id="FwS-Ml-5MR"/>
+                    <connections>
+                        <outlet property="AIdisplay" destination="AXV-BH-jS5" id="W0U-Hg-Bcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3342" y="852"/>
+            <point key="canvasLocation" x="3341.5384615384614" y="851.65876777251185"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lKE-fO-E9u">
