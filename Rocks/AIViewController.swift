@@ -9,7 +9,10 @@ import UIKit
 
 class AIViewController: UIViewController {
 
+    @IBOutlet weak var userSelectedImage: UIImageView!
     @IBOutlet weak var AIdisplay: UILabel!
+    @IBOutlet weak var AISelectedImage: UIImageView!
+    @IBOutlet weak var resultLabel: UILabel!
     var score : Int = 0
     var streak : Int = 0
     var selection : selectionOptions = .unselected
@@ -25,18 +28,23 @@ class AIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func rockButton(_ sender: UIButton) {
         selection = selectionOptions.rock
+        //UIImage.Orientation = .upMirrored
+        userSelectedImage.image = UIImage(named: "rockPic")
         begin()
     }
     @IBAction func scissorsButton(_ sender: UIButton) {
         selection = selectionOptions.scissors
+        userSelectedImage.image = UIImage(named: "scissorsPic")
         begin()
     }
     @IBAction func paperButton(_ sender: UIButton) {
         selection = selectionOptions.paper
+        userSelectedImage.image = UIImage(named: "paperPic")
         begin()
     }
     func begin(){
@@ -44,14 +52,19 @@ class AIViewController: UIViewController {
         switch randomInt {
         case 1:
             selectionAI = .rock
+            AISelectedImage.image = UIImage(named: "rockPic")
         case 2:
             selectionAI = .scissors
+            AISelectedImage.image = UIImage(named: "scissorsPic")
         case 3:
             selectionAI = .paper
+            AISelectedImage.image = UIImage(named: "paperPic")
         default:
             selectionAI = .unselected
+            AISelectedImage.image = UIImage(named: "robot")
         }
         AIdisplay.text = selectionAI.rawValue
+        resultLabel.text = AppData.result(selection.rawValue, selectionAI.rawValue)
     }
     
     
