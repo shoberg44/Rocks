@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E6253B6A292BBFBA00465795 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6253B69292BBFBA00465795 /* AIViewController.swift */; };
+		E6355B96292D0F5B00B7B1CD /* VsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6355B95292D0F5B00B7B1CD /* VsViewController.swift */; };
 		E682012F2925269800C44426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682012E2925269800C44426 /* AppDelegate.swift */; };
 		E68201312925269800C44426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68201302925269800C44426 /* SceneDelegate.swift */; };
 		E68201332925269800C44426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68201322925269800C44426 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		E6253B69292BBFBA00465795 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
+		E6355B95292D0F5B00B7B1CD /* VsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VsViewController.swift; sourceTree = "<group>"; };
 		E682012B2925269800C44426 /* Rocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E682012E2925269800C44426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E68201302925269800C44426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E6253B69292BBFBA00465795 /* AIViewController.swift */,
+				E6355B95292D0F5B00B7B1CD /* VsViewController.swift */,
 				E682012E2925269800C44426 /* AppDelegate.swift */,
 				E68201302925269800C44426 /* SceneDelegate.swift */,
 				E68201322925269800C44426 /* ViewController.swift */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E68201392925269800C44426 /* Rocks.xcdatamodeld in Sources */,
+				E6355B96292D0F5B00B7B1CD /* VsViewController.swift in Sources */,
 				E68201332925269800C44426 /* ViewController.swift in Sources */,
 				E682012F2925269800C44426 /* AppDelegate.swift in Sources */,
 				E68201312925269800C44426 /* SceneDelegate.swift in Sources */,

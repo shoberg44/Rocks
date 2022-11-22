@@ -4,6 +4,24 @@
 //
 //  Created by STEVEN HOBERG on 11/16/22.
 //
+//  Programming Concepts (10)
+//
+//  1  Varable/Constants
+//  2  Operators
+//  3  if/else
+//  4  Switch statements
+//  5  Functions
+//  6  Enums
+//  7  Classes
+//
+//  UI Elements (8)
+//
+//  1  Button
+//  2  Label
+//  3  Imageview
+//  4  Navigation Controller
+//  5  View Controller
+//  6  Constraints
 
 import UIKit
 class AppData{
