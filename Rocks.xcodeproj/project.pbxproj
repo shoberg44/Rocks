@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580E6289292D9EBD0068FE48 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E6288292D9EBD0068FE48 /* SpeedViewController.swift */; };
 		E6253B6A292BBFBA00465795 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6253B69292BBFBA00465795 /* AIViewController.swift */; };
 		E6355B96292D0F5B00B7B1CD /* VsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6355B95292D0F5B00B7B1CD /* VsViewController.swift */; };
 		E682012F2925269800C44426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682012E2925269800C44426 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		580E6288292D9EBD0068FE48 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		E6253B69292BBFBA00465795 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		E6355B95292D0F5B00B7B1CD /* VsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VsViewController.swift; sourceTree = "<group>"; };
 		E682012B2925269800C44426 /* Rocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			children = (
 				E6253B69292BBFBA00465795 /* AIViewController.swift */,
 				E6355B95292D0F5B00B7B1CD /* VsViewController.swift */,
+				580E6288292D9EBD0068FE48 /* SpeedViewController.swift */,
 				E682012E2925269800C44426 /* AppDelegate.swift */,
 				E68201302925269800C44426 /* SceneDelegate.swift */,
 				E68201322925269800C44426 /* ViewController.swift */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E68201392925269800C44426 /* Rocks.xcdatamodeld in Sources */,
+				580E6289292D9EBD0068FE48 /* SpeedViewController.swift in Sources */,
 				E6355B96292D0F5B00B7B1CD /* VsViewController.swift in Sources */,
 				E68201332925269800C44426 /* ViewController.swift in Sources */,
 				E682012F2925269800C44426 /* AppDelegate.swift in Sources */,

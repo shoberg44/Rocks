@@ -126,6 +126,58 @@
             </objects>
             <point key="canvasLocation" x="4089" y="852"/>
         </scene>
+        <!--Speed Mode-->
+        <scene sceneID="gLs-oO-i6q">
+            <objects>
+                <viewController title="Speed Mode" id="YqY-tt-S4M" customClass="SpeedViewController" customModule="Rocks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQM-uM-qem">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testFace" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-hP-KsU">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sleeping" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-ak-Vcc">
+                                <rect key="frame" x="119" y="397" width="121" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Mu4-YQ-bAr" appends="YES" id="lFl-gQ-ZAk"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wcO-EI-pTC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wcO-EI-pTC" firstAttribute="trailing" secondItem="rCF-hP-KsU" secondAttribute="trailing" id="9M1-qE-7MU"/>
+                            <constraint firstItem="wcO-EI-pTC" firstAttribute="bottom" secondItem="rCF-hP-KsU" secondAttribute="bottom" constant="-34" id="ENE-oJ-two"/>
+                            <constraint firstItem="rCF-hP-KsU" firstAttribute="leading" secondItem="wcO-EI-pTC" secondAttribute="leading" id="vGg-ip-zdz"/>
+                            <constraint firstItem="rCF-hP-KsU" firstAttribute="top" secondItem="wcO-EI-pTC" secondAttribute="top" constant="-91" id="x2G-j2-rJf"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xLf-lZ-eCV" appends="YES" id="gDt-EG-mSu"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Nk-rC-YU6"/>
+                    <connections>
+                        <outlet property="sleepImage" destination="Q5d-ak-Vcc" id="aZu-v5-kKU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWr-Pe-amD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Mu4-YQ-bAr">
+                    <connections>
+                        <action selector="panGesture:" destination="YqY-tt-S4M" id="sbR-2d-nxb"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer delaysTouchesBegan="YES" allowableMovement="0.0" minimumPressDuration="0.5" id="xLf-lZ-eCV">
+                    <connections>
+                        <action selector="longPressAction:" destination="YqY-tt-S4M" id="eee-xe-Ivk"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2981.5384615384614" y="195.49763033175356"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="lKE-fO-E9u">
             <objects>
@@ -182,6 +234,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="YqY-tt-S4M" kind="show" id="yGx-dX-P24"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pZX-fu-37F"/>
@@ -219,8 +274,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Kr-h39">
-                                <rect key="frame" x="0.0" y="241.00000000000003" width="390" height="71.333333333333343"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Kr-h39">
+                                <rect key="frame" x="0.0" y="241" width="416" height="71"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NG7-ET-bZe">
                                         <rect key="frame" x="134" y="-27" width="122" height="123"/>
@@ -241,16 +296,16 @@
                                             <constraint firstAttribute="height" constant="123" id="crf-Xt-vZ8"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88r-d6-m7x">
-                                        <rect key="frame" x="311" y="0.0" width="19.666666666666686" height="38.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-fy-IqE">
+                                        <rect key="frame" x="58.999999999999993" y="0.0" width="19.666666666666664" height="38"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" systemColor="systemGreenColor"/>
+                                        <color key="shadowColor" systemColor="systemBlueColor"/>
                                         <size key="shadowOffset" width="2" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdZ-G4-tGg">
-                                        <rect key="frame" x="40" y="38.333333333333314" width="57.666666666666657" height="24"/>
+                                        <rect key="frame" x="40" y="38" width="57.666666666666657" height="24.333333333333329"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -258,7 +313,7 @@
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuq-8h-W7l">
-                                        <rect key="frame" x="291.66666666666669" y="38.333333333333314" width="58.333333333333314" height="24"/>
+                                        <rect key="frame" x="291" y="38" width="59" height="24.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uuq-8h-W7l" secondAttribute="height" multiplier="83:34" id="9OP-Gu-Mm2"/>
                                         </constraints>
@@ -268,12 +323,12 @@
                                         <color key="shadowColor" systemColor="systemGreenColor"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-fy-IqE">
-                                        <rect key="frame" x="58.999999999999993" y="0.0" width="19.666666666666664" height="38.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88r-d6-m7x">
+                                        <rect key="frame" x="287" y="0.0" width="67" height="38"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" systemColor="systemBlueColor"/>
+                                        <color key="shadowColor" systemColor="systemGreenColor"/>
                                         <size key="shadowOffset" width="2" height="1"/>
                                     </label>
                                 </subviews>
@@ -282,7 +337,6 @@
                                     <constraint firstItem="NG7-ET-bZe" firstAttribute="leading" secondItem="THu-Kr-h39" secondAttribute="leading" constant="134" id="207-3g-V8O"/>
                                     <constraint firstItem="LCh-fy-IqE" firstAttribute="leading" secondItem="THu-Kr-h39" secondAttribute="leading" constant="59" id="9dV-IS-MyY"/>
                                     <constraint firstAttribute="trailing" secondItem="uuq-8h-W7l" secondAttribute="trailing" constant="40" id="E3U-sB-W7o"/>
-                                    <constraint firstAttribute="trailing" secondItem="88r-d6-m7x" secondAttribute="trailing" constant="59.333333333333314" id="EoX-Rk-u4K"/>
                                     <constraint firstItem="LCh-fy-IqE" firstAttribute="top" secondItem="THu-Kr-h39" secondAttribute="top" id="IFD-1Y-Itd"/>
                                     <constraint firstItem="LCh-fy-IqE" firstAttribute="centerY" secondItem="88r-d6-m7x" secondAttribute="centerY" id="MVM-qT-PPx"/>
                                     <constraint firstAttribute="bottom" secondItem="TdZ-G4-tGg" secondAttribute="bottom" constant="9" id="Q37-Fu-voC"/>
@@ -290,7 +344,6 @@
                                     <constraint firstAttribute="trailing" secondItem="NG7-ET-bZe" secondAttribute="trailing" constant="134" id="ahf-77-s8j"/>
                                     <constraint firstItem="TdZ-G4-tGg" firstAttribute="leading" secondItem="THu-Kr-h39" secondAttribute="leading" constant="40" id="b05-F8-Jb7"/>
                                     <constraint firstItem="88r-d6-m7x" firstAttribute="top" secondItem="THu-Kr-h39" secondAttribute="top" id="ciq-jt-l0x"/>
-                                    <constraint firstItem="88r-d6-m7x" firstAttribute="leading" secondItem="NG7-ET-bZe" secondAttribute="trailing" constant="55" id="gAA-dp-TDM"/>
                                     <constraint firstAttribute="bottom" secondItem="uuq-8h-W7l" secondAttribute="bottom" constant="9.0000000000000142" id="iYx-R9-eam"/>
                                     <constraint firstItem="TdZ-G4-tGg" firstAttribute="top" secondItem="LCh-fy-IqE" secondAttribute="bottom" id="m7W-RU-eon"/>
                                     <constraint firstItem="88r-d6-m7x" firstAttribute="centerX" secondItem="uuq-8h-W7l" secondAttribute="centerX" id="pGh-XR-ITa"/>
@@ -408,6 +461,8 @@
         <image name="externaldrive.fill.badge.questionmark" catalog="system" width="128" height="92"/>
         <image name="figure.walk.motion" catalog="system" width="128" height="112"/>
         <image name="shareplay" catalog="system" width="128" height="75"/>
+        <image name="sleeping" width="609" height="619"/>
+        <image name="testFace" width="750" height="973"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
