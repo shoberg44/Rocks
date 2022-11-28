@@ -107,13 +107,13 @@
 		E682012D2925269800C44426 /* Rocks */ = {
 			isa = PBXGroup;
 			children = (
+				E68201342925269800C44426 /* Main.storyboard */,
+				E68201322925269800C44426 /* ViewController.swift */,
 				E6253B69292BBFBA00465795 /* AIViewController.swift */,
 				E6355B95292D0F5B00B7B1CD /* VsViewController.swift */,
 				580E6288292D9EBD0068FE48 /* SpeedViewController.swift */,
 				E682012E2925269800C44426 /* AppDelegate.swift */,
 				E68201302925269800C44426 /* SceneDelegate.swift */,
-				E68201322925269800C44426 /* ViewController.swift */,
-				E68201342925269800C44426 /* Main.storyboard */,
 				E682013A2925269900C44426 /* Assets.xcassets */,
 				E682013C2925269900C44426 /* LaunchScreen.storyboard */,
 				E682013F2925269900C44426 /* Info.plist */,

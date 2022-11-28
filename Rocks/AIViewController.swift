@@ -13,6 +13,8 @@ class AIViewController: UIViewController {
     @IBOutlet weak var AIdisplay: UILabel!
     @IBOutlet weak var AISelectedImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var userSelectionLabel: UILabel!
+    
     var score : Int = 0
     var streak : Int = 0
     var selection : selectionOptions = .unselected
@@ -63,20 +65,9 @@ class AIViewController: UIViewController {
             selectionAI = .unselected
             AISelectedImage.image = UIImage(named: "robot")
         }
-        AIdisplay.text = selectionAI.rawValue
-        resultLabel.text = AppData.result(selection.rawValue, selectionAI.rawValue)
+        AIdisplay.text = selectionAI.rawValue //changes onscreen ai selection label to emnum based value
+        userSelectionLabel.text = selection.rawValue //above but with user label
+        resultLabel.text = AppData.result(selection.rawValue, selectionAI.rawValue) //calculates result with satic function result()
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
