@@ -6,8 +6,15 @@
 //
 
 import UIKit
-
 class SpeedViewController: UIViewController {
+//    var test : NSInvocation = XCTestCase(invocation: <#T##NSInvocation?#>)
+//    var timerStarted: Bool = false
+//    var seconds: Int = 0
+//    let timer = Timer(timeInterval: 1, invocation: .main, repeats: true)
+//        if timerStarted{
+//            seconds += 1
+//        }
+//    }
     
     
     @IBOutlet weak var selectionAILabel: UILabel!
@@ -15,6 +22,8 @@ class SpeedViewController: UIViewController {
     @IBOutlet weak var selectionUserLabel: UILabel!
     @IBOutlet weak var selectionUserPic: UIImageView!
     
+    var rawValue: dispatch_time_t = 0
+    var hist : [Int] = []
     var averageSpeed : Double = 0
     var streak : Int = 0
     var selection : selectionOptions = .unselected
@@ -28,6 +37,10 @@ class SpeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("before")
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            print("Async after 2 seconds")
+//        }
     }
     @IBAction func rockButton(_ sender: UIButton) {
         selection = selectionOptions.rock
@@ -46,6 +59,7 @@ class SpeedViewController: UIViewController {
         begin()
     }
     func begin(){
+        //rawValue = .now()
         let randomInt = Int.random(in: 1...3)
         switch randomInt {
         case 1:
@@ -61,8 +75,10 @@ class SpeedViewController: UIViewController {
             selectionAI = .unselected
             selectionAIPic.image = UIImage(named: "robot")
         }
+        
         selectionAILabel.text = selectionAI.rawValue //changes onscreen ai selection label to emnum based value
         selectionUserLabel.text = selection.rawValue //above but with user label
-        //resultLabel.text = AppData.result(selection.rawValue, selectionAI.rawValue) //calculates result with satic function result()
+        print(AppData.result(selection.rawValue, selectionAI.rawValue)) //calculates result with satic function result()
+        streak += 1
     }
 }
